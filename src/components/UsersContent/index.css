@@ -63,8 +63,9 @@
 }
 
 .username{
+    font-size: 23px;
+    max-width: 16rem;
     text-align: left;
-    max-width: 20rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

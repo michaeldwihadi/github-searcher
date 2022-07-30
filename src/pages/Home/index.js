@@ -69,7 +69,6 @@ const Home = () => {
           if (userInput.searchQuery.length > 0 && query.length === 0) {
             queryString = "q=" + encodeURIComponent(userInput.searchQuery);
           }
-          console.log(queryString);
           dispatch(fetchRepositoryData(queryString, page));
           break;
 
@@ -80,11 +79,26 @@ const Home = () => {
     return () => clearTimeout(timeOutSearch);
   }, [query, dropdownValue, page]);
 
+  const dataContent =
+    dropdownValue === "users" ? (
+      <>
+        {usersData.users.items && (
+          <UsersContent usersData={usersData} error={error} />
+        )}
+      </>
+    ) : (
+      <>
+        {repositoryData.repository.items && (
+          <RepoContent repositoryData={repositoryData} error={error} />
+        )}
+      </>
+    );
+
   return (
     <div className="container">
       <SearchInput
         query={query}
-        handleValidation={() => handleValidation()}
+        handleValidation={() => handleValidation(query)}
         handleChange={(e) => setQuery(e.target.value)}
       />
       <DropdownInput
@@ -94,20 +108,9 @@ const Home = () => {
       {!usersData.users.items && !repositoryData.repository.items && (
         <InitialContent />
       )}
-      {dropdownValue === "users" ? (
-        <>
-          {usersData.users.items && (
-            <UsersContent usersData={usersData} error={error} />
-          )}
-        </>
-      ) : (
-        <>
-          {repositoryData.repository.items && (
-            <RepoContent repositoryData={repositoryData} error={error} />
-          )}
-        </>
-      )}
-      {(usersData.users.items || repositoryData.repository.items) && (
+      {dataContent}
+      {(usersData.users.total_count > 0 ||
+        repositoryData.repository.total_count > 0) && (
         <>
           {!usersData.loading && !repositoryData.loading && !error && (
             <Pagination

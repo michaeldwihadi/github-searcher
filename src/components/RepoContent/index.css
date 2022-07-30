@@ -63,10 +63,13 @@
     color: #979797;
 }
 
-.username{
+.repo-name{
     text-align: left;
-    font-size: 25px;
-    max-width: 20rem;
+    font-size: 23px;
+    max-width: 16rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .language{
