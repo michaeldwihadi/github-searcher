@@ -1,0 +1,37 @@
+.logo{
+    position: absolute;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+
+.header-container{
+    margin-left: 90px;
+}
+
+.header-title{
+    padding-top: 18px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.header-desc{
+    margin-top: -4px;
+    color: #979797;
+}
+
+@media only screen and (max-width: 415px) {
+    .header-container {
+        margin-left: 75px;
+    }
+
+    .header-title{
+        font-size: 20px;
+    }
+    
+    .header-desc{
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+}

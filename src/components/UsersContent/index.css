@@ -1,0 +1,83 @@
+.users-list{
+    width: 100px;
+    margin: 25px 35px 25px 0px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 20px -5px rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+
+.users-list .users-list-column{
+    padding: 6px 0px;
+}
+
+.users-list:hover{
+    transform: scale(1.02);
+    transition: all 0.4s;
+}
+
+.users-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.users-container > * {
+    flex-basis: 30%;
+}
+
+.users-list-column{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.users-list-column .columns-img{
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+.users-img{
+    border-radius: 50%;
+    width: 60%;
+    border: 1px solid #e7e7e7;
+    margin-top: 2rem;
+}
+
+.external-link{
+    text-decoration: none;
+    color: black;
+}
+
+.description{
+    float: left;
+}
+
+.details{
+    margin-bottom: 20px;
+    margin-top: -4px;
+    text-align: left;
+    color: #979797;
+}
+
+.username{
+    text-align: left;
+    max-width: 20rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 1268px) {
+    .users-container > * {
+        flex-basis: 45%;
+    }
+}
+
+@media only screen and (max-width: 825px) {
+    .users-container > * {
+        flex-basis: 100%;
+    }
+}

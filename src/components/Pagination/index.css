@@ -1,0 +1,76 @@
+.paginationContainer{
+    display: flex;
+    align-items: center;
+    margin-right: 0.8rem;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin: auto;
+    width: 21%;
+}
+
+.paginationButton{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: none;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.paginationFirstPageButton{
+    align-items: center;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    background: none;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+
+.paginationLastPageButton{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    background: none;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.PaginationLabel{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1268px) {
+    .paginationContainer{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 825px) {
+    .paginationContainer{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    .paginationContainer{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .paginationContainer{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .paginationContainer{
+        width: 100%;
+        margin: 0px;
+    }
+}

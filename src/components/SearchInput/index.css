@@ -1,0 +1,26 @@
+.search-input{
+    width: 30rem;
+    height: 2rem;
+    border: 1px solid #d7d7d7;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 665px) {
+    .search-input{
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .search-input{
+        width: 19rem;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .search-input{
+        width: 15rem;
+    }
+}
+
