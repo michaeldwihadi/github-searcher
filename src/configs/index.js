@@ -1,6 +1,6 @@
 let config = {
-  api_url: "https://api.github.com/search",
-  api_token: "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",
+  api_url: process.env.REACT_APP_CURRENT_URL,
+  api_token: process.env.REACT_APP_CURRENT_TOKEN,
 };
 
 export { config };
